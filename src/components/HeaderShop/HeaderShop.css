@@ -1,0 +1,10 @@
+.header-item__cart{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+}
+.header-item__cart-icon{
+    margin-right: 10px;
+    position: relative;
+}

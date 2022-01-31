@@ -1,0 +1,17 @@
+header{
+    height: 80px;
+}
+.wrapper{
+    height: 100%;
+    margin: 0 auto;
+}
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-item{
+    font-size: 28px;
+    font-weight: 700;
+    cursor: pointer;
+}
