@@ -26,15 +26,6 @@
     right: 0;
     bottom: -8px;
 }
-.game-item__details-buy__btn{
-    background: rgb(86,88,237);
-    outline: none;
-    margin: 0 ;
-    padding: 2px 5px;
-    border-radius: 15px;
-    border: none;
-    cursor: pointer;
-}
 .game-item__details-genres{
     margin: 5px 0 8px 0;
     display: flex;
@@ -49,12 +40,27 @@
     background-color: rgb(80, 82, 82);
     border: none;
 }
+.btn-gray{
+    background: rgb(87, 87, 90);
+    outline: none;
+    margin: 0 ;
+    padding: 2px 5px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
+.col{
+    height: 320px;
+}
 @media (max-width: 1200px){
     .game-item__details{
         padding: 10px 0px 15px 20px;
     }
 }
 @media (max-width: 768px){
+    .col{
+        height: 300px;
+    }
     .game-item__details{
         padding: 10px 0 0 20px;
     }

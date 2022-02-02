@@ -1,7 +1,22 @@
 import React from 'react';
 import './GameListItem.css'
+import { useDispatch } from 'react-redux';
+import { deleteItemFromCart, setItemInCart } from '../../redux/cart/reducer';
+import { useSelector } from 'react-redux';
 
 const GameListItem = ({game}) => {
+  const dispatch = useDispatch()
+  const items = useSelector(state => state.cart.itemsInCart)
+  const isItemInCart = items.some(item => item.id === game.id)
+  const handleClick = (e) => {
+      e.stopPropagation();
+      if(isItemInCart){
+          dispatch(deleteItemFromCart(game.id))
+      } else{
+        dispatch(setItemInCart(game))
+      }
+      
+  }
   return (
         <div className="col"  >
             <div className="game-item">
@@ -15,7 +30,7 @@ const GameListItem = ({game}) => {
                     </div>
                     <div className="game-item__details-buy">
                         <div className="game-item__details-buy__price">{game.price} руб.</div>
-                        <button className="game-item__details-buy__btn">В корзину</button>
+                        <button className={isItemInCart ? "btn-gray" : 'game-btn'}  onClick={handleClick}>{isItemInCart ? "Убрать из корзины" : "В корзину"}</button>
                     </div>
                 </div>
             </div>
@@ -23,4 +38,4 @@ const GameListItem = ({game}) => {
   );
 };
 
-export default GameListItem;
+export default GameListItem; 
