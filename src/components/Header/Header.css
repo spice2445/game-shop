@@ -1,5 +1,6 @@
 header{
     height: 80px;
+    width: 100vw;
 }
 .wrapper{
     height: 100%;
@@ -15,10 +16,20 @@ header{
     font-weight: 700;
     cursor: pointer;
 }
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
     header{
         position: fixed;
         z-index: 1;
+        width: 100vw !important;
         background-color: rgb(25, 26, 28);
+    }
+    .container{
+        max-width: 1920px !important;
+    }
+}
+@media (max-width: 576px) {
+    .container{
+        width: 100vw ;
+        max-width: 1920px;
     }
 }

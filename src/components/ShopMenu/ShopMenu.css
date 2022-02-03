@@ -27,3 +27,19 @@
     border: none;
     cursor: pointer;
 }
+@media (max-width: 478px) {
+    .cart-menu{
+        left: -211px;
+        width: 340px;
+        padding: 7px 15px;
+        z-index: 3;
+        border-radius: 15px;
+    }
+    .cart-item{
+        padding: 5px 0;
+    }
+    .cart-item span{
+        font-size: 15px;
+    }
+}
+    
