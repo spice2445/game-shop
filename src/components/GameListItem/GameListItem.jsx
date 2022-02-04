@@ -2,9 +2,12 @@ import React from 'react';
 import './GameListItem.css'
 import { useDispatch } from 'react-redux';
 import { deleteItemFromCart, setItemInCart } from '../../redux/cart/reducer';
+import { setCurrentGame } from '../../redux/game/reducer';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 const GameListItem = ({game}) => {
+  const navigate = useNavigate();
   const dispatch = useDispatch()
   const items = useSelector(state => state.cart.itemsInCart)
   const isItemInCart = items.some(item => item.id === game.id)
@@ -14,12 +17,16 @@ const GameListItem = ({game}) => {
           dispatch(deleteItemFromCart(game.id))
       } else{
         dispatch(setItemInCart(game))
-      }
-      
+      } 
   }
+  const setGame = (e)=>{
+    e.stopPropagation();
+    dispatch(setCurrentGame(game))
+    navigate(`/game/${game.title}`, { replace: true })
+    }   
   return (
         <div className="col"  >
-            <div className="game-item">
+            <div className="game-item" onClick={setGame}>
                 <img src={game.image} alt={game.title} className="game-item__cover" />
                 <div className="game-item__details">
                     <div className="game-item__details-title">{game.title}</div>
