@@ -1,8 +1,7 @@
 import React from 'react';
 import GameList from '../../components/GameList/GameList';
 
-const HomePage = () => {
-  const GAMES = [
+export const GAMES = [
     {
         image: './images/forza_5.jpeg',
         title: 'Forza Horizon 5',
@@ -57,7 +56,8 @@ const HomePage = () => {
         id: 6,
         description: 'Assassin’s Creed Valhalla — мультиплатформенная компьютерная игра в жанре action/RPG, разработанная студией Ubisoft Montreal под издательством компании Ubisoft. Является двенадцатой игрой в серии игр Assassin’s Creed.'
     },
-  ] 
+]
+const HomePage = () => {
   return (
       <GameList games={GAMES}/>
   );
