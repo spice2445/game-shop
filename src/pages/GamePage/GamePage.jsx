@@ -8,17 +8,22 @@ import {GAMES} from "../HomePage/HomePage";
 import {setCurrentGame} from "../../redux/game/reducer";
 import GameBuy from '../../components/GameBuy/GameBuy';
 
-const GamePage = () => {
+
+const GamePage = (props) => {
   const game = useSelector(state => state.game.currentGame)
   const dispatch = useDispatch();
   const { title } = useParams();
+
   useEffect(() => {
     const currentGame = GAMES.find(game => game.title === title);
     dispatch(setCurrentGame(currentGame));
   })
+
   if(!game) {
     return <span>Загрузка...</span>
+
   }
+
   return (
     <div className='info wrapper container'>
     <h1 className="info-title">{game.title}</h1>
