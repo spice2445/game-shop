@@ -42,4 +42,8 @@
         font-size: 15px;
     }
 }
-    
+@media (max-width: 400px){
+    .cart-menu {
+        left: -211px;
+    }
+}

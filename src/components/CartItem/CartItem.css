@@ -5,6 +5,9 @@
     justify-content: space-between;
     align-items: center;
 }
+.cart-item span{
+    font-size: 17px;
+}
 .cart-item__price{
     display: flex;
     align-items: center;
@@ -12,4 +15,5 @@
 .cart-item__price{
     margin-left: 5px;
     cursor: pointer;
+    white-space: nowrap;
 }

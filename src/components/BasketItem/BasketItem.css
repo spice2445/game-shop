@@ -23,6 +23,7 @@
 }
 .basket-item__price{
     margin-left: auto;
+    white-space: nowrap;
 }
 .basket-total__price{
     text-align: right;
@@ -33,4 +34,31 @@
 .basket-item__delete{
     cursor: pointer;
     margin-left: 5px;
+}
+@media (max-width: 1000px){
+    .basket-item__title span,
+    .basket-item__price span{
+    font-size: 22px;
+    }
+}
+@media(max-width: 768px){
+    .basket-item__title span,
+    .basket-item__price span{
+        font-size: 18px;
+    }
+    .basket-left{
+        margin-top: 90px;
+    }
+    .basket-item{
+        flex-direction: column;
+        align-items: center;
+    }
+    .basket-item__price{
+        margin-left:0;
+        margin-top: 5px;
+        white-space: nowrap;
+    }
+    .basket-item__cover{
+        margin-right: 0;
+    }
 }
