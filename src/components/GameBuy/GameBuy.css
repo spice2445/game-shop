@@ -1,0 +1,17 @@
+.btn-gray{
+    background: rgb(87, 87, 90);
+    outline: none;
+    margin: 0 ;
+    padding: 2px 5px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
+.game-item__details-buy{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    position: absolute;
+    right: 0;
+    bottom: -8px;
+}

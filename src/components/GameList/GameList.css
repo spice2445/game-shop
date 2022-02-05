@@ -2,3 +2,8 @@
     margin: 0 auto;
     padding-bottom: 50px;
 }
+@media (max-width: 768px) {
+    .game-list{
+        margin: 60px auto 0;
+    }
+}

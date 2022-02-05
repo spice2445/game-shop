@@ -1,0 +1,14 @@
+.game-item__details-genres__item{
+    outline: none;
+    margin: 0 2px ;
+    padding: 2px 5px;
+    font-size: 13px;
+    border-radius: 10px;
+    background-color: rgb(80, 82, 82);
+    border: none;
+}
+.game-item__details-genres{
+    margin: 5px 0 8px 0;
+    display: flex;
+    justify-content: flex-start;
+}

@@ -9,6 +9,7 @@
     display: flex;
     align-items: center;
 }
-.max-width{
-    
+.cart-item__price{
+    margin-left: 5px;
+    cursor: pointer;
 }
